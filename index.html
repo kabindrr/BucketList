@@ -31,7 +31,7 @@
         <div class="form">
           <form action="" class="shadow">
             <div class="row g-2 p-3">
-              <div class="col-sm-6">
+              <div class="col-md-6">
                 <input
                   type="text"
                   name="task"
@@ -40,7 +40,7 @@
                   placeholder="Bucket List"
                 />
               </div>
-              <div class="col-sm-3">
+              <div class="col-md-3">
                 <input
                   type="number"
                   name="hr"
@@ -50,7 +50,7 @@
                   min="1"
                 />
               </div>
-              <div class="col-sm-3 d-grid">
+              <div class="col-md-3 d-grid">
                 <button class="btn btn-secondary">Bucket Me</button>
               </div>
             </div>
@@ -59,7 +59,59 @@
 
         <!-- tables -->
 
-        <!-- entrylist -->
+        <div class="row mt-5">
+          <div class="col-sm">
+            <h3>Entry List</h3>
+            <hr />
+            <!-- entrylist Table -->
+            <table class="table table-striped table-hover border">
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Bali</td>
+                  <td>5000</td>
+                  <td class="text-end">
+                    <button class="btn btn-danger">
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                    <button class="btn btn-success">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="col-sm">
+            <h3>Bad List</h3>
+            <hr />
+            <!-- entrylist Table -->
+            <table class="table table-striped table-hover border">
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Bali</td>
+                  <td>5000</td>
+                  <td class="text-end">
+                    <button class="btn btn-warning">
+                      <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <button class="btn btn-danger">
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="alert alert-success">
+              You could have saved 100 hours
+            </div>
+          </div>
+        </div>
+        <div class="alert alert-success">
+          Totoal hours allocated per week 120
+        </div>
 
         <!-- badList -->
       </div>
