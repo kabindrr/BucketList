@@ -29,12 +29,16 @@
 
         <!-- form -->
         <div class="form">
-          <form action="" class="shadow">
+          <form
+            class="shadow"
+            onsubmit="handleOnSubmit(this)"
+            action="javascript:void(0)"
+          >
             <div class="row g-2 p-3">
               <div class="col-md-6">
                 <input
                   type="text"
-                  name="task"
+                  name="bucketList"
                   class="form-control"
                   id="exampleFormControlInput1"
                   placeholder="Bucket List"
@@ -43,11 +47,11 @@
               <div class="col-md-3">
                 <input
                   type="number"
-                  name="hr"
+                  name="money"
                   class="form-control"
                   id="exampleFormControlInput1"
-                  placeholder="Hours"
-                  min="1"
+                  placeholder="Money Reqired"
+                  min="100"
                 />
               </div>
               <div class="col-md-3 d-grid">
