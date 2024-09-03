@@ -1,6 +1,6 @@
 .wrapper {
   background-color: rgba(128, 0, 21, 0.932);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .container {
@@ -11,6 +11,7 @@
 }
 .header {
   padding-top: 40px;
+  color: wheat;
 }
 .form {
   width: auto;
@@ -21,4 +22,5 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
+  margin-top: 20px;
 }
