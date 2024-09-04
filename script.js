@@ -1,15 +1,24 @@
 let bucketListContainer = [];
+const moneyWasted = document.getElementById("MoneyWasted");
+
+const totalBudget = 2000 * 12;
 
 const handleOnSubmit = (e) => {
   const newForm = new FormData(e);
   const bucketList = newForm.get("bucketList");
-  const money = newForm.get("money");
+  const money = +newForm.get("money");
   const obj = {
     bucketList,
     money,
     id: randomIdGenerator(),
     type: "entry",
   };
+
+  //checking if enough money left
+  const existingTtlBudget = totalMoneyCalculation();
+  if (existingTtlBudget + money > totalBudget) {
+    return alert("Not enough Budget Time to save More");
+  }
 
   bucketListContainer.push(obj);
   displayElmList();
@@ -41,6 +50,7 @@ const displayElmList = () => {
                 </tr>`;
   });
   bucketListEntry.innerHTML = str;
+  totalMoneyCalculation();
 };
 const displayBadList = () => {
   let str = "";
@@ -67,7 +77,14 @@ const displayBadList = () => {
                   </td>
                 </tr>`;
   });
+
   badElm.innerHTML = str;
+  document.getElementById("moneyWasted").innerText = badList.reduce(
+    (acc, item) => {
+      return acc + item.money;
+    },
+    0
+  );
 };
 const randomIdGenerator = () => {
   const str = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
@@ -100,4 +117,13 @@ const handleOnSwitch = (id, type) => {
   });
   displayElmList();
   displayBadList();
+};
+
+const totalMoneyCalculation = () => {
+  const ttlBudget = bucketListContainer.reduce((acc, item) => {
+    return acc + item.money;
+  }, 0);
+
+  document.getElementById("totalBudget").innerText = ttlBudget;
+  return ttlBudget;
 };
