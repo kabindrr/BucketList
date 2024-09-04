@@ -1,5 +1,5 @@
 .wrapper {
-  background-color: rgba(128, 0, 21, 0.932);
+  background-color: rgba(17, 16, 16, 0.932);
   min-height: 100vh;
 }
 
@@ -13,16 +13,32 @@
   padding-top: 40px;
   color: wheat;
 }
+.navBar {
+  border: 2px solid red;
+  padding: 2px;
+  position: sticky;
+  top: 0;
+}
 .form {
+  min-height: 30vh;
+  align-content: center;
+
   border: 2px solid red;
   border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
 }
 
 .table {
   --bs-table-bg: transparent;
+}
+
+.alert {
+  background-color: rgba(127, 246, 255, 0.813);
+}
+.alert {
+  font-size: 20px;
+  font: bolder;
+}
+
+h3 {
+  color: wheat;
 }

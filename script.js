@@ -16,10 +16,10 @@ const displayElmList = () => {
   let str = "";
   const bucketListEntry = document.getElementById("bucketListEntry");
   bucketListContainer.map((item, i) => {
-    str += `<tr>
+    str += `<tr class="">
                   <td>${1 + i}</td>
                   <td>${item.bucketList}</td>
-                  <td>${item.money}</td>
+                  <td>$${item.money}</td>
                   <td class="text-end">
                     <button class="btn btn-danger">
                       <i class="fa-solid fa-trash-can"></i>
