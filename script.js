@@ -186,7 +186,7 @@ const handleOnDelete = (id) => {
     displayList();
   }
 
-  const toastLiveExample = document.getElementById("liveToast");
+  const toastLiveExample = document.getElementById("liveToastDelete");
   const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
   const toastSound = document.getElementById("deleteSound");
 
