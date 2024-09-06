@@ -28,8 +28,12 @@
           role="alert"
           aria-live="assertive"
           aria-atomic="true"
+          style="background-color: rgb(11, 190, 50); color: white"
         >
-          <div class="toast-header">
+          <div
+            class="toast-header"
+            style="background-color: rgba(0, 139, 42, 0.726); color: white"
+          >
             <audio id="toastifySound">
               <source src="./assets/toastifySound.mp3" type="audio/mpeg" />
             </audio>
@@ -54,16 +58,46 @@
           role="alert"
           aria-live="assertive"
           aria-atomic="true"
+          style="background-color: rgb(236, 52, 6); color: white"
         >
-          <div class="toast-header">
-            <!-- <audio id="toastifySound">
-              <source src="./assets/toastifySound.mp3" type="audio/mpeg" />
-            </audio> -->
-
+          <div
+            class="toast-header"
+            style="background-color: rgba(190, 38, 11, 0.678); color: white"
+          >
             <audio id="deleteSound" src="./assets/deleteSound.mp3"></audio>
             <strong class="me-auto"
               >Sorry to Here, Your Bucket has been Deleted.</strong
             >
+            <small>Now</small>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="toast-body"></div>
+        </div>
+      </div>
+      <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div
+          id="liveToastToSwitch"
+          class="toast"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+          style="background-color: rgb(243, 210, 21); color: white"
+        >
+          <div
+            class="toast-header"
+            style="background-color: rgba(243, 210, 21, 0.781); color: white"
+          >
+            <!-- <audio id="toastifySound">
+              <source src="./assets/toastifySound.mp3" type="audio/mpeg" />
+            </audio> -->
+
+            <audio id="soundToSwitch" src="./assets/switch.mp3"></audio>
+            <strong class="me-auto">Your Bucket List has been Switched</strong>
             <small>Now</small>
             <button
               type="button"
@@ -230,7 +264,7 @@
           </div>
         </div>
         <div class="alert alert-danger">
-          Totoal money allocated per Year <span id="totalBudget">0</span>
+          Totoal money Spent On Holidays <span id="totalBudget">0</span>
         </div>
 
         <!-- badList -->

@@ -1,7 +1,7 @@
 let bucketListContainer = [];
 const moneyWasted = document.getElementById("MoneyWasted");
 
-const totalBudget = 2000 * 12;
+const totalBudget = 12 * 2000;
 
 const handleOnSubmit = (e) => {
   const newForm = new FormData(e);
@@ -202,6 +202,13 @@ const handleOnSwitch = (id, type) => {
     return item;
   });
   displayList();
+
+  const toastLiveExample = document.getElementById("liveToastToSwitch");
+  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+  const toastSound = document.getElementById("soundToSwitch");
+
+  toastBootstrap.show();
+  toastSound.play();
 };
 
 const totalMoneyCalculation = () => {
