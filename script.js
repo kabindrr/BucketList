@@ -220,7 +220,9 @@ const totalMoneyCalculation = () => {
   return ttlBudget;
 };
 const displayDataFromLocalStorage = () => {
-  bucketListContainer = JSON.parse(localStorage.getItem("bucketListContainer"));
+  bucketListContainer =
+    JSON.parse(localStorage.getItem("bucketListContainer")) ?? [];
+
   displayList();
 };
 displayDataFromLocalStorage();
